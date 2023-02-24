@@ -91,7 +91,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_all(self, arg):
-        """Prints string representations of instances"""
+        """Printing string representations of instances"""
         args = shlex.split(arg)
         obj_list = []
         if len(args) == 0:
@@ -145,5 +145,4 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
-if __name__ == '__main__':
-    HBNBCommand().cmdloop()
+if __name__ == '__main_
