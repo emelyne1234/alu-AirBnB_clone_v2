@@ -8,8 +8,6 @@ import models
 from models import storage
 from os import getenv
 
-
-
 Base = declarative_base()
 
 
@@ -55,4 +53,3 @@ class BaseModel:
     def delete(self):
         """deletes the current instance from storage"""
         storage.delete(self)
-
