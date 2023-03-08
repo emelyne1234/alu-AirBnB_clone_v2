@@ -5,16 +5,17 @@ from sqlalchemy import Column, String, DateTime, Integer
 from sqlalchemy.orm import relationship
 from models.city import City
 import os
+import models
 
 
 class State(BaseModel, Base):
     """ State class """
-     if models.storage_t == "db":
-     __tablename__ = 'states'
-     name = Column(String(128), nullable=False)
-     cities = relationship('City', backref='state')
-     else:
-         name = ""
+    if models.storage_t == "db":
+        __tablename__ = 'states'
+        name = Column(String(128), nullable=False)
+        cities = relationship('City', backref='state')
+    else:
+        name = ""
 
     def __init__(self, *args, **kwargs):
         """initializes state"""

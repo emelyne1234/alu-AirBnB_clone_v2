@@ -8,6 +8,7 @@ from sqlalchemy import Column, String, Integer
 from sqlalchemy.orm import relationship
 import models
 
+
 class Amenity(BaseModel, Base):
     """Amenities of a place"""
 

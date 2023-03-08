@@ -14,7 +14,8 @@ from models.city import City
 from models.amenity import Amenity
 from models.review import Review
 
-class DBStorage(): 
+
+class DBStorage():
     """private class attributes"""
     __engine = None
     __session = None
@@ -32,11 +33,8 @@ def __init__(self):
                     password,
                     host,
                     database), pool_pre_ping=True)
-
-
     if os.getenv('HBNB_ENV') == "test":
-            Base.metadata.drop_all(self.__engine)
-
+        Base.metadata.drop_all(self.__engine)
 
 
 def all(self, cls=None):
@@ -46,7 +44,7 @@ def all(self, cls=None):
             'State': State, 'City': City, 'Amenity': Amenity,
             'Review': Review
         }
-        obj_dict = {}
+    obj_dict = {}
     if cls is not None and cls in classes:
         class_objects = self.__session.query(classes[cls]).all()
         for obj in class_objects:
@@ -60,16 +58,19 @@ def all(self, cls=None):
                 obj_dict[key] = obj
 
     return obj_dict
+
+
 def new(self, obj):
         """Adding the object"""
     self.__session.add(obj)
 
+
 def save(self):
-        """saving commits"""
+    """saving commits"""
     self.__session.commit()
 
 def delete(self, obj=None):
-        """Deleting from the current database"""
+    """Deleting from the current database"""
     if obj is not None:
         self.__session.delete(obj)
 
@@ -80,6 +81,7 @@ def reload(self):
                                        expire_on_commit=False)
     Session = scoped_session(session_factory)
     self.__session = Session()
+    
 def close(self):
     """removing method"""
     self.session.remove()
