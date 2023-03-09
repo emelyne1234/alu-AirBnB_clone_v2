@@ -17,8 +17,7 @@ def do_deploy(archive_path):
     try:
         filename = archive_path.split("/")[-1]
         dirname = filename.split(".")[0]
-
-
+        
         Test_dir = "/data/web_static/releases/"
 
         put(archive_path, '/tmp/')
@@ -39,4 +38,3 @@ def do_deploy(archive_path):
         return True
     except:
         return False
-
