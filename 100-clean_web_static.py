@@ -6,11 +6,9 @@ from fabric.api import *
 
 env.hosts = ['54.225.38.130', '18.207.143.154']
 
+
 def do_clean(number=0):
     """deletes outdates"""
-
-     Args:
-        number (int): The number of archives to retain.
 
 
     number = 1 if int(number) == 0 else int(number)
