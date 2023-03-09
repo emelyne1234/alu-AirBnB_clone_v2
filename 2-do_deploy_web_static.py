@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""fabric script that distributes an archive to my web"""
+"""fabric script that distributes an archive to my webservers"""
 
 
 from os.path import exists
