@@ -19,7 +19,6 @@ def do_deploy(archive_path):
         dirname = filename.split(".")[0]
         
         Test_dir = "/data/web_static/releases/"
-
         put(archive_path, '/tmp/')
 
         run('mkdir -p {}{}/'.format(Test_dir, dirname))
