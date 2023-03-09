@@ -2,6 +2,11 @@
 """creating and distributing an archive to my webservers using baric"""
 
 
+from fabric.api import env, local, put, run
+from datetime import datetime
+from os.path import exists, isdir
+
+
 def do_pack():
     """Create a tgz archive from the contents of the web_static folder"""
     try:
@@ -17,7 +22,7 @@ def do_pack():
 
 def do_deploy(archive_path):
     """Distribute the archive to the web servers"""
-    if exists(archive_path) is False:
+    if not exists(archive_path):
         return False
     try:
         file_name = archive_path.split("/")[-1]
