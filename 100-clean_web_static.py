@@ -9,8 +9,6 @@ env.hosts = ['54.225.38.130', '18.207.143.154']
 
 def do_clean(number=0):
     """deletes outdates"""
-
-
     number = 1 if int(number) == 0 else int(number)
 
     archives = sorted(os.listdir("versions"))
