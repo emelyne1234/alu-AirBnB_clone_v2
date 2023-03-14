@@ -10,7 +10,7 @@ app.url_map.strict_slashes = False
 @ app.route('/')
 def print_hello(name):
     """hbnb"""
-    print(f'Hello {name}!')
+    return (f'Hello {name}!')
 
 if __name__ == '__main__':
     """allows the execution"""
