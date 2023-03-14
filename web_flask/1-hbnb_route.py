@@ -9,7 +9,7 @@ app = Flask(__name__)
 @ app.route('/')
 def print_hello(name):
     """hbnb"""
-    return(f'Hello {name}!')
+    return (f'Hello {name}!')
 
 
 @ app.route('/hbnb')
