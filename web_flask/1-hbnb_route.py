@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """a script that starts a flask application"""
+
+
 from flask import Flask
 
 app = Flask(__name__)
@@ -15,7 +17,7 @@ def print_hello():
 @ app.route('/hbnb', strict_slashes=False)
 def display_hbnb():
     """hbnb"""
-    return "HBNB!"
+    return "HBNB"
 
 
 if __name__ == '__main__':
