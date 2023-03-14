@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# starts application
 """a script that starts a flask application"""
 from flask import Flask
 
@@ -7,12 +6,12 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
-@ app.route('/')
-def print_hello(name):
+@ app.route('/', strict_slashes=False)
+def print_hello():
     """hbnb"""
-    return (f'Hello {name}!')
+    return "Hello HBNB!"
 
-if __name__ == '__main__':
-    """allows the execution"""
-    print_hi('HBNB')
-    app.run = (port := 5000, host := "0.0.0.0")
+
+if __name__ == '_main_':
+    app.debug = 1
+    app.run(host='0.0.0.0', port=5000)
