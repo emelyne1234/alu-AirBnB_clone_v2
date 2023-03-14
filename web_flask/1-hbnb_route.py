@@ -9,13 +9,13 @@ app = Flask(__name__)
 @ app.route('/')
 def print_hello(name):
     """hbnb"""
-    print(f'Hello {name}!')
+    return(f'Hello {name}!')
 
 
 @ app.route('/hbnb')
 def print_hi(name):
     """ printing hbnb"""
-    print(name)
+    return name
 
 
 if __name__ == '__main__':
