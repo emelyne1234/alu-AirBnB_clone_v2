@@ -12,13 +12,6 @@ def print_hello(name):
     """hbnb"""
     print(f'Hello {name}!')
 
-
-@ app.route('/hbnb')
-def print_hi(name):
-    """ printing hbnb"""
-    print(name)
-
-
 if __name__ == '__main__':
     """allows the execution"""
     print_hi('HBNB')

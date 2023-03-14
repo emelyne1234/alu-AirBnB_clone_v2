@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# starts an application
 """ a script that starts a flask application """
 from flask import Flask
 
