@@ -21,7 +21,7 @@ def display_hbnb():
 @ app.route('/c/<string:name>', strict_slashes=False)
 def c_is_fun(name):
     """C is fun"""
-    return "C {}".format(name)
+    return "C {}".format(name.replace('_', ' '))
 
 
 if __name__ == '__main__':
