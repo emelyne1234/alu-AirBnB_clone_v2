@@ -7,15 +7,15 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 @ app.route('/', strict_slashes = False)
-def print_hello(name):
+def print_hello():
     """hbnb"""
-    return (f'Hello {name}!')
+    return 'Hello HBNB!'
 
 
 @ app.route('/hbnb', strict_slashes = False)
-def print_hi(name):
+def print_hi():
     """ printing hbnb"""
-    return name
+    return HBNB
 
 
 if __name__ == '__main__':
